@@ -1,4 +1,6 @@
 /**
+ * 函数节流 throttle
+ *
  * 1. 为什么需要函数节流 throttle：
  * (1) 一些浏览器事件如：window.mousemove、window.scroll、window.resize 等触发频率非常高，会造成界面卡顿
  * (2) 若有向后台发送请求则会频繁发送请求触发事件，给服务器造成不小且不必要的压力
@@ -7,8 +9,9 @@
  *
  * 3. 应用场景： DOM元素拖拽、页面滚动、秒杀活动点击、窗口大小调整等适合平分时间作为触发事件的条件之一
  *
- * 参数1：回调函数
- * 参数2：设定周期
+ * @param callback 回调函数
+ * @param wait 设定的周期
+ * @returns {function(...[*]=)} 返回结果为函数
  */
 
 function throttle(callback, wait) {

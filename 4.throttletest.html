@@ -19,7 +19,7 @@
 <div></div>
 <script src="4.throttle.js"></script>
 <script>
-    // 这里以 mousemove 事件为例
+    // 函数节流以 mousemove 事件为例
     const div = document.querySelector('div');
     div.addEventListener('mousemove', throttle(function (event) {
         console.log(Date.now(), event);
