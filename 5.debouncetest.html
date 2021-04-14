@@ -9,6 +9,7 @@
 <script src="5.debounce.js"></script>
 <script>
     const input = document.querySelector('input');
+    // 1s 内最后一次按键才触发事件
     input.onkeyup = debounce(function (e) {
         console.log(e.keyCode);
     }, 1000)
