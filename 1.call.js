@@ -5,7 +5,7 @@
  * @param Fn 要执行的函数
  * @param obj 函数运行时 this 指向对象
  * @param args 函数运行时需要的参数
- * @returns {*} 返回 Fn 函数执行结果
+ * @returns {*} 返回 Fn 函数的执行结果
  */
 
 function call(Fn, obj, ...args) {

@@ -17,7 +17,7 @@
     let defineObj = {c: 1024};
     console.log(call(add, defineObj, 10, 20));
 
-    // 给全局对象设置 c 属性，调用 call 传递对象设置为 null ===> Window 2118
+    // 给全局对象设置 c 属性，调用 call 传递 null ===> Window 2118
     window.c = 2048;
     console.log(call(add, null, 30, 40));
 </script>
