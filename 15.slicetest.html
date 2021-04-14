@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="15.slice.js"></script>
+<script>
+    const array = [2, 4, 6, 8, 10, 12, 14, 16];
+    // 获取下标为 1 到下标为 3 的元素构成的数组即：[4, 6, 8]
+    console.log(slice(array, 1, 4));
+    // 获取下标为 0 到下标为 4 的元素构成的数组即：[2, 4, 6, 8, 10]
+    console.log(slice(array, null, 5));
+    // 获取下标为 2 以及以后的所有元素构成的数组即：[6, 8, 10, 12, 14, 16]
+    console.log(slice(array, 2));
+</script>
+</body>
+</html>
