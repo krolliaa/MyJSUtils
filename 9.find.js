@@ -12,6 +12,6 @@ function find(array, callback) {
         // 若符合条件即返回元素值
         if (callback(array[i], i)) return array[i];
     }
-    // 若无符合条件的元素返回 undefined
+    // 若没有符合条件的元素返回 undefined
     return undefined;
 }

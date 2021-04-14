@@ -12,6 +12,6 @@ function findIndex(array, callback) {
         // 若符合条件即返回元素下标
         if (callback(array[i], i)) return i;
     }
-    // 若无符合条件的元素返回 -1
+    // 若没有符合条件的元素返回 -1
     return -1;
 }
