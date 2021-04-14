@@ -1,9 +1,11 @@
 /**
- * 实现 bind() 函数
+ * * 实现 bind() 函数
  * bind() 与 call()、apply() 区别：可以改变 this 指向但不执行函数而是返回一个新的函数
- * 参数1：Fn 执行的函数
- * 参数2：obj 函数运行时 this 指向的对象
- * 参数3：...args 函数运行时的参数
+ *
+ * @param Fn 执行的函数
+ * @param obj 函数运行时 this 指向的对象
+ * @param args 函数运行时的参数
+ * @returns {function(...[*]): *}
  */
 
 function bind(Fn, obj, ...args) {

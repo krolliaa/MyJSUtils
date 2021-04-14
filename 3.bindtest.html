@@ -16,7 +16,7 @@
     let fn1 = bind(add, defineObj, 10, 20);
     console.log(fn1());
     let fn2 = bind(add, defineObj);
-    console.log(fn2(30, 40)); //参数在后面
+    console.log(fn2(30, 40)); //参数放置后面
 
     window.c = 2048;
     let fn3 = bind(add, null, 50, 60);
