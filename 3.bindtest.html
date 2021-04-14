@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script src="3.bind.js"></script>
+<script>
+    function add(a, b) {
+        console.log(arguments);
+        return a + b + this.c;
+    }
+
+    let defineObj = {c: 1024};
+    let fn1 = bind(add, defineObj, 10, 20);
+    console.log(fn1());
+    let fn2 = bind(add, defineObj);
+    console.log(fn2(30, 40)); //参数在后面
+
+    window.c = 2048;
+    let fn3 = bind(add, null, 50, 60);
+    console.log(fn3());
+    let fn4 = bind(add, null);
+    console.log(fn4(70, 80));
+</script>
+</body>
+</html>
