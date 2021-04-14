@@ -1,10 +1,12 @@
 /**
- * 实现 apply() 函数
- * 作用：可以改变运行时的 this 值，并且得到函数运行的执行结果
+ * Function.prototype.call()
+ * 作用：可改变函数执行时 this 指向，并得到函数执行结果
  * apply() 与 call() 的区别：传入的参数列表形式不同
- * 参数1：Fn 执行的函数
- * 参数2：obj 函数运行时 this 指向的对象
- * 参数3：args 函数运行时的参数 ===> Array
+ *
+ * @param Fn 要执行的函数
+ * @param obj 函数运行时 this 指向对象
+ * @param args 函数运行时需要的参数，这里必须为数组
+ * @returns {*} 返回 Fn 函数的执行结果
  */
 
 function apply(Fn, obj, args) {
