@@ -1,3 +1,11 @@
+/**
+ * Array.prototype.concat()
+ * 作用：将当前数组与多个数组或值进行合并形成一个新的数组进行返回
+ *
+ * @param array 数组
+ * @param args 参数
+ * @returns {*[]} 返回新数组
+ */
 function concat(array, ...args) {
     // 定义一个返回数组
     const result = [...array];
