@@ -1,9 +1,11 @@
 /**
- * 实现 call() 函数
- * 作用：可以改变运行时的 this 值，并且得到函数运行的执行结果
- * 参数1：Fn 执行的函数
- * 参数2：obj 函数运行时 this 指向的对象
- * 参数3：...args 函数运行时的参数
+ * Function.prototype.call()
+ * 作用：可改变函数运行时的 this 指向并得到函数执行结果
+ *
+ * @param Fn 要执行的函数
+ * @param obj 函数运行时 this 指向对象
+ * @param args 函数运行时需要的参数
+ * @returns {*} 返回 Fn 函数执行结果
  */
 
 function call(Fn, obj, ...args) {
