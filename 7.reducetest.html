@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="7.reduce.js"></script>
+<script>
+    const array = [1, 2, 6, 8];
+    // 结果：27
+    let result = reduce(array, function (res, value) {
+        return res + value;
+    }, 10);
+    console.log(result);
+</script>
+</body>
+</html>
