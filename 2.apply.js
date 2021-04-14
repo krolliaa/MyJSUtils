@@ -4,7 +4,7 @@
  * apply() 与 call() 的区别：传入的参数列表形式不同
  * 参数1：Fn 执行的函数
  * 参数2：obj 函数运行时 this 指向的对象
- * 参数3：args 函数运行时的参数 ===> 数组
+ * 参数3：args 函数运行时的参数 ===> Array
  */
 
 function apply(Fn, obj, args) {
