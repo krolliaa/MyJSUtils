@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="2.apply.js"></script>
+<script>
+    // 自定义 add 函数
+    function add(a, b) {
+        console.log(this);
+        return a + b + this.c;
+    }
+
+    // 自定义对象，调用 apply ===> Object 1054
+    let defineObj = {c: 1024};
+    console.log(apply(add, defineObj, [10, 20]));
+
+    // 给全局对象设置 c 属性，调用 apply 传递对象设置为 null ===> Window 2118
+    window.c = 2048;
+    console.log(apply(add, null, [30, 40]));
+</script>
+</body>
+</html>
