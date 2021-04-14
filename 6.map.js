@@ -12,7 +12,7 @@ function map(array, callback) {
     let result = [];
     // 遍历获取每个元素，每个元素调用一次回调函数
     for (let i = 0; i < array.length; i++) {
-        // 允许返回下标
+        // 可返回下标
         result.push(callback(array[i], i));
     }
     return result;
