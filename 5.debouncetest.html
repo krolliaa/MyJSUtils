@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数防抖debounce</title>
+</head>
+<body>
+<input type="text">
+<script src="5.debounce.js"></script>
+<script>
+    const input = document.querySelector('input');
+    input.onkeyup = debounce(function (e) {
+        console.log(e.keyCode);
+    }, 1000)
+</script>
+</body>
+</html>
