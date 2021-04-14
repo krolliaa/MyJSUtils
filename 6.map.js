@@ -1,7 +1,11 @@
 /**
  * Array.prototype.map()
- * 1. 作用：返回该数组每个元素调用一次提供的函数形成一个新的数组
+ * 1. 作用：数组每个元素都将调用一次回调函数并返回一个新的数组
  * 2. 举例：[1, 2, 3, 4].map(x => x * 2) ===> [2, 4, 6, 8]
+ *
+ * @param array 数组
+ * @param callback 回调函数
+ * @returns {[]} 返回一个新的数组
  */
 
 function map(array, callback) {
