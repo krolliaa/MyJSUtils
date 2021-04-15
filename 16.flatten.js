@@ -1,7 +1,7 @@
 /**
  * 扁平化数组 flatten
  * 作用：将嵌套的数组变成一维数组
- * 原理：递归 + concat()
+ * 原理：递归 + concat() || 剩余参数 + some() + concat()
  *
  * @param array 数组
  * @returns {[]} 返回扁平化数组
