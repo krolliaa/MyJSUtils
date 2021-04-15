@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="19.pull.js"></script>
+<script>
+    const array1 = [1, 3, 5, 3, 7];
+    console.log("删除前", array1);
+    console.log("删除的元素", pull(array1, 2, 7, 3, 7));
+    console.log("删除后", array1);
+    const array2 = [2, 8, 8, 8];
+    console.log("删除前", array2);
+    console.log("删除的元素", pullAll(array2, [1, 2]));
+    console.log("删除后", array2);
+</script>
+</body>
+</html>
