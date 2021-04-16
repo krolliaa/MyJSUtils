@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义new</title>
+</head>
+<body>
+<script src="21.newInstance.js"></script>
+<script>
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    const person = newInstance(Person, 'Jack', 18);
+    console.log(person);
+</script>
+</body>
+</html>
