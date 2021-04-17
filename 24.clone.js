@@ -20,7 +20,7 @@ function clone1(target) {
 
 function clone2(target) {
     if (target !== null && typeof (target) === 'object') {
-        // 如果 target 是数组返回数组，如果 target 是对象返回对象
+        // 如果 target 是数组返回数组类型，如果 target 是对象返回对象类型
         const result = Array.isArray(target) ? [] : {};
         // target 是数组可以使用 forEach，是对象可以使用 Object.keys() 这里使用通用的 for...in
         for (let key in target) {
@@ -31,5 +31,6 @@ function clone2(target) {
         }
         return result;
     }
+    // 如果不是引用数据类型就直接返回目标
     return target;
 }
