@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="22.myInstanceof.js"></script>
+<script>
+    function Person() {}
+    console.log(myInstanceof(new Person, Person)); // true
+    console.log(myInstanceof(new Person, Function)); // false
+    console.log(myInstanceof(new Person, Object)); // true
+    // Person 是构造函数也是对象，__proto__ 指向 Function.prototype
+    console.log(myInstanceof(Person, Function)); // true
+    console.log(myInstanceof(Person, Object)); // true
+</script>
+</body>
+</html>
