@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="23.mergeObject.js"></script>
+<script>
+    const object = {
+        a: [{x: 2}, {y: 4}],
+        b: 1,
+        c: 'zoo'
+    }
+    const other = {
+        a: {z: 3},
+        b: [2, 3],
+        c: 'foo'
+    }
+    console.log(mergeObject(object, other));
+</script>
+</body>
+</html>
