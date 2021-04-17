@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="25.deepClone.js"></script>
+<script>
+    const object = {
+        a: 1,
+        b: ['e', 'f', 'g'],
+        c: {h: 20},
+        d: function () {} // JSON 深拷贝无法拷贝函数属性
+    }
+    // JSON 深拷贝若有循环引用会报错
+    object.b.push(object.c);
+    object.c.j = object.b;
+    // const result = deepClone1(object);
+    // result.c.h = 21;
+    // console.log(object);
+    // console.log(result);
+
+    //递归深拷贝解决函数属性丢失问题
+    // const result = deepClone2(object);
+    // console.log(result);
+
+    // 递归深拷贝解决循环引用问题
+    // const result = deepClone3(object);
+    // console.log(result);
+
+    // 递归深拷贝解决 forin 性能问题
+    const result = deepClone4(object);
+    console.log(result);
+</script>
+</body>
+</html>
