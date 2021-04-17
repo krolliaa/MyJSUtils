@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="24.clone.js"></script>
+<script>
+    const object = {x: 'abc', y: {m: 1}}
+    const result = clone1(object);
+    // 浅拷贝后的 result.x 是基本数据类型，其内存空间在栈内存开辟，修改时不会影响 object.x
+    result.x = '1243';
+    console.log("object.x = ", object.x);
+    console.log("result.x = ", result.x);
+    console.log("------------------------------------")
+    // 浅拷贝后的 result.y.m 是引用数据类型，其内存空间在堆内存开辟，地址指向与 object.y.m 相同，若修改会影响 object.y.m
+    result.y.m = 2;
+    console.log("object.y.m = ", object.y.m);
+    console.log("result.y.m = ", result.y.m);
+    console.log("------------------------------------")
+    const result2 = clone2(object);
+    const result3 = object;
+    result2.y.m = 3;
+    console.log("object.y.m = ", object.y.m);
+    console.log("result.y.m = ", result.y.m);
+    console.log("result2.y.m = ", result2.y.m);
+</script>
+</body>
+</html>
