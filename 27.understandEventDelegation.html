@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .father {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: crimson;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        .son {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            background-color: deepskyblue;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+<script>
+    /*
+        事件捕获自顶部而下到达目标元素
+        事件冒泡自目标元素而上到达顶部
+        事件委托：
+            将多个子元素的同类事件绑定在共同的父元素上
+            好处：1. 减少内存占用 2. 动态添加的内部元素也能响应
+     */
+    const father = document.querySelector('.father');
+    const son = document.querySelector('.son');
+    father.addEventListener('click', function () {
+        console.log("捕获 father");
+    }, true);
+    son.addEventListener('click', function () {
+        console.log("捕获 son");
+    }, true);
+    father.addEventListener('click', function () {
+        console.log("冒泡 father");
+    });
+    son.addEventListener('click', function () {
+        console.log("冒泡 son");
+    });
+</script>
+</body>
+</html>

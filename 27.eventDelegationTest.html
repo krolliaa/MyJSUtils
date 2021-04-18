@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="items">
+    <li>AAAA</li>
+    <li>BBBB</li>
+    <li>CCCC</li>
+    <li>DDDD</li>
+    <div>EEEE</div>
+</ul>
+<script src="27.eventDelegation.js"></script>
+<script>
+    // 绑定事件对象 ul ===> #items
+    // 绑定事件类型 click
+    // 事件处理程序
+    // 绑定事件源
+    addEventListener('#items', 'click', function () {
+        console.log(this.innerHTML);
+    }, 'li');
+
+</script>
+</body>
+</html>
