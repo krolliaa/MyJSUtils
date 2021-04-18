@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="28.eventBus.js"></script>
+<script>
+    eventBus.on('login', data => console.log(data + "成功登录"));
+    eventBus.on('login', data => console.log(data + "成功写入数据"));
+    eventBus.on('login', data => console.log(data + "成功退出"));
+    setTimeout(() => {
+        eventBus.emit('login', '张三');
+    }, 2000);
+    eventBus.off('login');
+</script>
+</body>
+</html>
